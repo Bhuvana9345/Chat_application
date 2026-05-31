@@ -1,0 +1,16 @@
+target/
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+*.iml
+*.log
+
+# Local machine helpers. These contain local Windows/XAMPP/Maven paths.
+Run-LinguaChat-CMD.cmd
+Clear-LinguaChat-Database.cmd
+mvnw.cmd
+
+# Real secrets should never be committed.
+.env

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaChat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-page">
+<div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+        <header class="topbar">
+            <div>
+                <strong id="meName">LinguaChat</strong>
+                <small id="meLanguage"></small>
+            </div>
+            <div class="top-actions">
+                <button id="darkToggle" title="Dark mode">◐</button>
+                <button id="deleteAccountBtn" title="Delete account">Del</button>
+                <button id="logoutBtn" title="Logout">⎋</button>
+            </div>
+        </header>
+        <div class="search-wrap">
+            <input id="searchUsers" placeholder="Search users">
+        </div>
+        <div id="userList" class="user-list"></div>
+    </aside>
+
+    <section class="chat-panel" id="chatPanel">
+        <header class="chat-header">
+            <button id="backBtn" class="mobile-only">‹</button>
+            <div class="avatar" id="chatAvatar">L</div>
+            <div>
+                <strong id="chatTitle">Select a chat</strong>
+                <small id="chatStatus">Online status appears here</small>
+            </div>
+            <div class="chat-actions">
+                <button id="voiceCallBtn" title="Voice call" disabled>Call</button>
+                <button id="videoCallBtn" title="Video call" disabled>Video</button>
+                <button id="clearChatBtn" title="Clear chat" disabled>Clear</button>
+                <button id="removeUserBtn" title="Remove from list" disabled>Remove</button>
+            </div>
+        </header>
+
+        <div id="messages" class="messages">
+            <div class="empty-state">Pick a user from the left to start chatting.</div>
+        </div>
+        <div id="typingIndicator" class="typing"></div>
+
+        <div id="replyBar" class="reply-bar hidden">
+            <div>
+                <strong>Replying to</strong>
+                <span id="replyText"></span>
+            </div>
+            <button id="cancelReplyBtn" type="button">x</button>
+        </div>
+        <form id="messageForm" class="composer">
+            <button type="button" id="emojiBtn" title="Emoji">☺</button>
+            <button type="button" id="attachBtn" title="Attach file">+</button>
+            <input id="fileInput" type="file" hidden>
+            <input id="messageInput" placeholder="Type a message" disabled autocomplete="off">
+            <button type="submit" id="sendBtn" disabled>Send</button>
+        </form>
+    </section>
+</div>
+
+<div id="reactionPopup" class="reaction-popup hidden">
+</div>
+
+<div id="emojiPicker" class="emoji-picker hidden">
+    <div class="emoji-picker-title">Emoji</div>
+    <div id="emojiGrid" class="emoji-grid"></div>
+</div>
+
+<div id="callModal" class="call-modal hidden">
+    <div class="call-card">
+        <div class="call-title">
+            <strong id="callTitle">LinguaChat Call</strong>
+            <span id="callState">Connecting...</span>
+        </div>
+        <div class="call-videos">
+            <video id="remoteVideo" autoplay playsinline></video>
+            <video id="localVideo" autoplay muted playsinline></video>
+        </div>
+        <div class="call-controls">
+            <button id="acceptCallBtn" type="button" class="hidden">Accept</button>
+            <button id="rejectCallBtn" type="button" class="danger">Reject</button>
+            <button id="endCallBtn" type="button" class="danger">End</button>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
