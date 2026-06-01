@@ -122,7 +122,7 @@ PORT
 SPRING_DATASOURCE_URL
 SPRING_DATASOURCE_USERNAME
 SPRING_DATASOURCE_PASSWORD
-APP_JWT_SECRET
+APP_JWT_KEY
 APP_JWT_EXPIRATION_MS
 APP_TRANSLATION_URL
 ```
@@ -133,7 +133,7 @@ Example:
 SPRING_DATASOURCE_URL=jdbc:mysql://host:3306/database?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=UTC
 SPRING_DATASOURCE_USERNAME=myuser
 SPRING_DATASOURCE_PASSWORD=mypassword
-APP_JWT_SECRET=UseASecretWithAtLeastThirtyTwoCharacters
+APP_JWT_KEY=UseASecretWithAtLeastThirtyTwoCharacters
 ```
 
 ## GitHub Upload
