@@ -86,7 +86,7 @@ mvnw.cmd clean spring-boot:run
 4. Open:
 
 ```text
-http://localhost:8080/login.html
+http://localhost:8084/login.html
 ```
 
 ## Fresh Database
