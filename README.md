@@ -8,7 +8,7 @@ https://github.com/Bhuvana9787/linguachat
 
 ## Live Demo
 
-Deployment URL will be added here after Railway deployment.
+https://web-production-5de869.up.railway.app/login.html
 
 ## Features
 
